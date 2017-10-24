@@ -22,6 +22,13 @@
     - 如使用int类型的vector就需要 调用 state_using_vector(int), 定义变量时使用 vector_int
     -  使用float类型的vector就需要 调用 state_using_vector(float),定义变量时使用 vector_float
     -  其他如此类推，定义变量的类型就是 "vector_"+"使用的类型名"
+    - 函数的命名
+        - "initVector_"+"使用的类型名"
+        - "pushBack_"+"使用的类型名"
+        - "pop_"+"使用的类型名"
+        - "remove_"+"使用的类型名"
+        - "getSize_"+"使用的类型名"
+        - "getMaxSize_"+"使用的类型名"
 
 
 ---
