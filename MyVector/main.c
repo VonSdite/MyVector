@@ -23,5 +23,6 @@ int main(int argc, char const *argv[])
         printf("%d ", a.elem[i]);
     }
     puts("");
+    remove_int(&a);
     return 0;
 }

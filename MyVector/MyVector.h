@@ -47,15 +47,18 @@ void pushBack_##T(struct _vector_##T *v, T *e)\
 void pop_##T(struct _vector_##T *v, T *e)\
 {\
     *e = v->elem[0];\
-    v->elem = v->elem + 1;\
     --(v->size);\
     --(v->maxSize);\
+    T *tmp = (T*)malloc((v->size)*sizeof(T));\
+    memcpy(tmp, v->elem+1, (v->size)*sizeof(T));\
+    free(&(v->elem[0]));\
+    v->elem = tmp;\
 }\
 void remove_##T(struct _vector_##T *v)\
 {\
     free(v->elem);\
+    v->elem = NULL;\
     v->size = v->maxSize = 0;\
-    free(v);\
 }\
 int getSize_##T(struct _vector_##T *v)\
 {\
