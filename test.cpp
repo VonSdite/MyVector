@@ -83,5 +83,15 @@ int main(int argc, char const *argv[])
     // (int)我的电脑只能开 2^28次方的大小， 达不到2^30次方
     howBigICanCreate(); 
 
+    std::vector<int> v;
+    v.resize(10);
+    printf("%d %d\n", v.size(), v.capacity());
+    v.pop_back();
+    v.pop_back();
+    v.pop_back();
+    v.pop_back();
+    v.pop_back();
+    v.pop_back();
+    printf("%d %d\n", v.size(), v.capacity());
     return 0;
 }
