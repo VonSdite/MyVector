@@ -41,7 +41,6 @@ int main(int argc, char const *argv[])
             vis[getCapacity_pchar(&a)] = 1;
         }
     }
-
     while (getSize_pchar(&a))
     {
         char *tmp;

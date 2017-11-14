@@ -7,12 +7,13 @@
 - 使用宏定义解决泛型编程问题
 - 当最大存储空间不够时，采取扩大为原来存储空间**两倍**的策略
 - 实现vector以下功能
-    + push_back()   在末尾增加一个元素
-    + pop           出队
-    + size()        返回元素个素
-    + max_size()    当前数据的大小
-    + init()        初始化函数
-    + remove()      销毁函数
+    + pushBack_类型()         在末尾增加一个元素
+    + popFront_类型()         出队
+    + getSize_类型()          返回元素个素
+    + getCapacity_类型()      当前数据的大小
+    + initVector_类型()       初始化函数
+    + remove_类型()           销毁函数
+    + getValueByIndex_类型()  索引取值
 
 ### 使用
 

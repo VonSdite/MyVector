@@ -66,6 +66,17 @@ void popFront_##T(struct _vector_##T *v, T *e)                                  
     --(v->_size);                                                                           \
     if(!v->_size) v->_empty = 1;                                                            \
 }                                                                                           \
+T getValueByIndex_##T(struct _vector_##T *v, int index)                                     \
+{                                                                                           \
+    if (index < 0 || index >= v->_size)                                                     \
+    {                                                                                       \
+        printf("索引越界\n");                                                                \
+        exit(1);                                                                            \
+    }                                                                                       \
+                                                                                            \
+    return v->elem[v->_head+index];                                                         \
+}                                                                                           \
+                                                                                            \
 void remove_##T(struct _vector_##T *v)                                                      \
 {                                                                                           \
     free(v->elem);                                                                          \
